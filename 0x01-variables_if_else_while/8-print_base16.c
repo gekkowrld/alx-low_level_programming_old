@@ -12,7 +12,7 @@ int main(void)
 		if (x < 10)
 			putchar('0' + x);
 		else
-			putchar(97 + x);
+			putchar(87 + x);
 	}
 	putchar('\n');
 
