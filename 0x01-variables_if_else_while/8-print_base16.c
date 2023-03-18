@@ -9,7 +9,7 @@ int main(void)
 
 	for (x = 0; x <= 16; x++)
 	{
-		if (x < 10);
+		if (x < 10)
 			putchar('0' + x);
 		else
 			putchar(97 + x);
