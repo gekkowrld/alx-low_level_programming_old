@@ -9,9 +9,7 @@ int main(void)
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		if (i == 'e' || i == 'q')
-			putchar('\0');
-		else
+		if (i != 'e' || i != 'q')
 			putchar(i);
 	}
 
