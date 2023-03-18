@@ -10,10 +10,11 @@ int main(void)
 	for (x = 0; x < 10; x++)
 	{
 		putchar(48 + x);
-		putchar(44);
-
-		if (x < 9)
+		if (i <=9)
+		{
+			putchar(44);
 			putchar(32);
+		}
 	}
 	putchar('\n');
 
