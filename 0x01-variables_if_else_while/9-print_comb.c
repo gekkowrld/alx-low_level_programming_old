@@ -11,8 +11,11 @@ int main(void)
 	{
 		putchar(48 + x);
 		putchar(44);
-		putchar(32);
+
+		if (x < 9)
+			putchar(32);
 	}
+	putchar('\n');
 
 	return (0);
 }
