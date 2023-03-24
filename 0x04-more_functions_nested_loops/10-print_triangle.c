@@ -3,9 +3,9 @@
 /**
 * print_triangle - makes characters be mapped like
 * a triangle
-* @ size: dimensions of the triangle
+* @size: dimensions of the triangle
 */
-void print_triangle(void)
+void print_triangle(int size)
 {
 	int i, j;
 
