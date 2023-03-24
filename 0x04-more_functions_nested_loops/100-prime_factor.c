@@ -6,14 +6,14 @@
 */
 int main(void)
 {
-	long int j,k;
+	long int j, k;
 
 	j = 612852475143;
 	for (k = 2; k <= j; k++)
 	{
 		if (j % k == 0)
 		{
-			j /=k;
+			j /= k;
 			k--;
 		}
 	}
