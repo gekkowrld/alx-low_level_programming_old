@@ -1,4 +1,3 @@
-# include "main.h"
 # include <stdio.h>
 
 /**
@@ -12,25 +11,25 @@ int main(void)
 
 	for (i = 0; i <= 100; i++)
 	{
-		if (i % 15)
+		if (i % 15 == 0)
 		{
 			printf("FizzBuzz");
-			_putchar(32);
+			putchar(32);
 		}
-		else if (i % 5)
+		else if (i % 5 == 0)
 		{
 			printf("Buzz");
-			_putchar(32);
+			putchar(32);
 		}
-		else if (i % 3)
+		else if (i % 3 == 0)
 		{
 			printf("Fizz");
-			_putchar(32);
+			putchar(32);
 		}
 		else
 		{
 			printf("%d", i);
-			_putchar(32);
+			putchar(32);
 		}
 	}
 	return (0);
