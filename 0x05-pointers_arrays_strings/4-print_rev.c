@@ -1,6 +1,5 @@
-# include "main.h"
-# include <string.h>
 # include <stdio.h>
+
 /**
 * print_rev - prints text in reverse order
 * @s: the string to be reversed
@@ -8,16 +7,14 @@
 
 void print_rev(char *s)
 {
-	s = "This is a long string of text";
-	char temp;
-	int k = strlen(s), i, l = k - 1;
+	int i = 0;
 
-	for (i = 0; i < l; i++)
+	while (i >= 0)
 	{
-		temp = s[i];
-		s[i] = s[l];
-		s[l] = temp;
-		l--;
+		if (s[i] != '\0')
+		i++;
 	}
-	puts(s);
+	for (i--; i >= 0; i++)
+		_putchar(s[i]);
+	_putchar('\n');
 }
