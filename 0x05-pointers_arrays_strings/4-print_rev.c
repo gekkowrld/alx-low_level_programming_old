@@ -9,10 +9,8 @@
 void print_rev(char *s)
 {
 	s = "This is a long string of text";
-	int i;
 	char temp;
-	int k = strlen(s);
-	int l = k - 1;
+	int k = strlen(s), i, l = k - 1;
 
 	for (i = 0; i < l; i++)
 	{
