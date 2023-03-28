@@ -4,6 +4,11 @@
 # include <time.h>
 # include <unistd.h>
 
+/**
+* main - print out a "strong" passwd
+* Return: 0
+*/
+
 int main(void)
 {
 	int l = 13, i;
@@ -34,4 +39,6 @@ int main(void)
 	passwd[l] = '\0';
 	printf("%s\n", passwd);
 	free(passwd);
+
+	return (0);
 }
