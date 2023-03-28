@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int i, j = 0, k = 0, s = 32, e = 126;
+	int j = 0, k = 0, s = 32, e = 126;
 
 	srand((time(0) * getpid()) + getpid());
 
@@ -26,4 +26,6 @@ int main(void)
 		}
 	}
 	putchar('\n');
+
+	return (0);
 }
