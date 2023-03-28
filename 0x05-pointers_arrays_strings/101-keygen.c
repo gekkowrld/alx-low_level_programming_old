@@ -11,7 +11,9 @@
 
 int main(void)
 {
-	int l = 13, i;
+	srand((time(0) * getpid()) + (time(0) % getpid()) - getpid());
+
+	int l = (rand() % 64), i;
 	char *passwd = malloc(l + 1);
 	char *d = "0123456789";
 	char *lc = "abcdefghijklmnopqrstuvwxyz";
@@ -21,7 +23,6 @@ int main(void)
 	char *s = "!@#$ *{}";
 	int sl = strlen(s);
 
-	srand((time(0) * getpid()) + (time(0) % getpid()) - getpid());
 
 	for (i = 0; i < l; i++)
 	{
