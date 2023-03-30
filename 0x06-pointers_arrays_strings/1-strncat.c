@@ -1,7 +1,7 @@
 # include "main.h"
 # include <stdio.h>
 /**
-* strncat - concatenates the src string to dest string
+* _strncat - concatenates the src string to dest string
 * @src: The source string
 * @dest: The destination string
 * @n: The strlen counter
