@@ -13,9 +13,16 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (*s != '\0')
 	{
-		if (*s == *accept)
-			return (i + 1);
+		if(*accept == '\0')
+			break;
+		else
+		{
+			if(*s == *accept)
+				break;
+		}
 		i++;
 		s++;
 	}
+	int j = i + 1;
+	return j;
 }
