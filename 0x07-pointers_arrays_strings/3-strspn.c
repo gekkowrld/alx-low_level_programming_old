@@ -1,4 +1,6 @@
 # include "main.h"
+# include <string.h>
+# include <stdbool.h>
 
 /**
  * _strspn - checks where the char is spotted first,
@@ -9,20 +11,23 @@
 */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0;
+	size_t i_l = 0, i, l, j = strlen(s), k = strlen(accept);
 
-	while (*s != '\0')
+	for (i = 0; i < j; i++)
 	{
-		if(*accept == '\0')
+		bool match = false;
+
+		for (l = 0; l < k; l++)
+			if (accept[l] == s[i])
+			{
+				match = true;
+				break;
+			}
+		if (!match)
 			break;
 		else
-		{
-			if(*s == *accept)
-				break;
-		}
-		i++;
-		s++;
+			i_l++;
 	}
-	int j = i + 1;
-	return j;
+
+	return (i);
 }
