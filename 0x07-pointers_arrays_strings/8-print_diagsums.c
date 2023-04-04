@@ -1,5 +1,5 @@
 # include "main.h"
-
+# include <stdio.h>
 /**
  * print_diagsums - calculates the diagonal
  * of a square matrix
