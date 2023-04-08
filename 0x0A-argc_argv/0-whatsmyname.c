@@ -1,4 +1,4 @@
-# include "main.h"
+# include <stdio.h>
 /**
 * main - prints out the program name
 * @argc: The arg count
