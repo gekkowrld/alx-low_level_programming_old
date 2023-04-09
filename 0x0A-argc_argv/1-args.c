@@ -1,7 +1,14 @@
 # include <stdio.h>
 # include <stdlib.h>
 
-int main(int argc, char *argv[])
+/**
+* main - check how many arguments are passed
+* into the commandline
+* @argc: The arguments coounter
+* @argv: The argument variable
+* Return: 0
+*/
+int main(int argc, __attribute__((unused))char *argv[])
 {
 	int i, j;
 
@@ -10,4 +17,5 @@ int main(int argc, char *argv[])
 		j = i;
 	}
 	printf("%d\n", j);
+	return (0);
 }
