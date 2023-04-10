@@ -1,6 +1,13 @@
 # include <stdio.h>
 # include <stdlib.h>
 
+/**
+* main - Output the change
+* @argc: Function argurment count
+* @argv: Function argument variable
+* Return: 0 or 1
+*/
+
 int main(int argc, char *argv[])
 {
 	int n = 0;
