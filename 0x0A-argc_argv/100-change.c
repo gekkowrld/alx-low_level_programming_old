@@ -1,5 +1,6 @@
 # include <stdio.h>
 # include <stdlib.h>
+# include <ctype.h>
 
 /**
 * main - Output the change
@@ -12,6 +13,19 @@ int main(int argc, char *argv[])
 {
 	int n = 0;
 
+	if (atoi(argv[1]) < 0)
+	{
+		int m;
+
+		for (m = 1; argv[1][m] == '\0'; m++)
+		{
+			if(!isdigit)
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+	}
 	if (argc == 2)
 	{
 		int k[] = {25, 10, 5, 2, 1};
