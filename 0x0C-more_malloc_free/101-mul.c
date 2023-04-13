@@ -103,3 +103,51 @@ void reverse_string(char *k)
 		j--;
 	}
 }
+
+/**
+ * main - main execution point
+ * @argc: Cmd arg counter
+ * @argv: Cmd arg var
+ * Return: 0
+*/
+int main(int argc, char **argv)
+{
+	int i, j, y, l1, l2, l3;
+	char *s1, *s2, *s3;
+
+	if (argc != 3)
+		_error();
+
+	if (!is_positive(argv[1]) || !is_positive(argv[2]))
+		_error();
+
+	l1 = strlen(argv[1]);
+	l2 = strlen(argv[2]);
+	l3 = l1 + l2;
+	s1 = argv[1];
+	s2 = argv[2];
+	s3 = malloc(l3 + 1);
+
+	for (i = 0; i < l3; i++)
+		s3[i] = '0';
+
+	s3[i] = '\0';
+
+	for (i = l1 - 1; i >= 0; i--)
+	{
+		y = 0;
+		for (j = l2 - 1; j >= 0; j--)
+		{
+			y += (s1[i] - '0') * (s2[j] - '0') + (s3[i + j + 1] - '0');
+			s3[i + j + 1] = y % 10 + '0';
+			y /= 10;
+		}
+		s3[i + j + 1] = y % 10 + '0';
+	}
+	while (*s3 == '0' && *(s3 + 1) != '\0')
+		s3++;
+	printf("%s\n", s3);
+	free(s3);
+
+	return (0);
+}
