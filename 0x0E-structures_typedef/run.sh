@@ -10,10 +10,13 @@ if [ -f $file ] && [ -f $file1 ]; then
 	gcc -c $file1 -o $end1 -Wall -pedantic -Werror -Wextra -std=gnu89
 
 	gcc $end1 $end -o $prog
+
+	rm $end1 $end
 fi
 
 if [ -x $prog ]; then
 	./$prog
 
-	rm $prog $end $end1
+	valgrind ./$prog
+	rm $prog
 fi
