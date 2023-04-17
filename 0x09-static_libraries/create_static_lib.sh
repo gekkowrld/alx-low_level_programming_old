@@ -1,7 +1,7 @@
 #!/bin/bash
 
 for file in *.c ; do
-    gcc -c "$file"
+    gcc -std=gnu99 -Wall -Werror -Wextra -pedantic -c "$file"
 done
 
 for file in *.o ; do
