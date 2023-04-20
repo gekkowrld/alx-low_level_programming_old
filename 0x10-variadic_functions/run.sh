@@ -17,5 +17,6 @@ fi
 if [ -x $prog ]; then
 	./$prog
 
+	valgrind ./$prog
 	rm $prog
 fi
